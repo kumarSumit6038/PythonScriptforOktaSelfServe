@@ -5,8 +5,6 @@ import requests
 import json
 import logging
 
-from requests import HTTPError
-
 import GetPropertyModule
 
 # import OIDCAppSelfServe

@@ -56,18 +56,12 @@ def create_oidc_application():
         'Content-Type': 'application/json',
         'Authorization': 'SSWS ' + api_key
     }
-    try:
-        response_app = requests.request("POST", tenant_url_app, headers=headers_app, data=payload_app)
-        getappid = response_app.json()['id']
-        print("Application ID:" + getappid)
-        response_app.raise_for_status()
-    except HTTPError as http_err:
-        print(f'HTTP Error ocurred: {http_err}')
-    except Exception as err:
-        print(f'Other error ocurred: {err}')
-    else:
-        print("Success")
-        return getappid
+
+    response_app = requests.request("POST", tenant_url_app, headers=headers_app, data=payload_app)
+    getappid = response_app.json()['id']
+    print("Application ID:" + getappid)
+    response_app.raise_for_status()
+    return getappid
 
 
 # create group to okta and fetch id
