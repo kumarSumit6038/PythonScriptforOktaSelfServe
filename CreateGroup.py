@@ -42,4 +42,5 @@ for x in range(len(var1)):
     logging.info("Group Ids: " + response.json()['id'])
     logging.info("Group/s created successfully.")
     logging.info("Elapsed time = ")
+    logging.log("i am testing this log type.")
     logging.info(datetime.datetime.now())
