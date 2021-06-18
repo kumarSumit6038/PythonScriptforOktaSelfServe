@@ -7,7 +7,7 @@ pipeline {
         stage('Clone Repo'){
             steps{
                 git url: "https://github.com/kumarSumit6038/OktaAppSelfServe.git"
-                url: "https://github.com/kumarSumit6038/OktaAppSelfServe/blob/master/app-details.properties"
+                //url: "https://github.com/kumarSumit6038/OktaAppSelfServe/blob/master/app-details.properties"
             }
 
         }
