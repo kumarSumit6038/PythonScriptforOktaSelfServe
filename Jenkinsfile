@@ -6,7 +6,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh 'python OIDCAppSelfServe.py'
+                sh 'python CreateGroup.py'
             }
         }
         stage('Test') {
