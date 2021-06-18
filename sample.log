@@ -1,0 +1,6 @@
+2021-06-18 00:39:15,718 | DEBUG: Here you have some information for debugging.
+2021-06-18 00:39:15,728 | DEBUG: Starting new HTTPS connection (1): dev-48491388.okta.com:443
+2021-06-18 00:39:16,859 | DEBUG: https://dev-48491388.okta.com:443 "POST /api/v1/groups HTTP/1.1" 200 None
+2021-06-18 00:39:16,867 | INFO: {"id":"00g1198993aU1Sw6j5d7","created":"2021-06-17T19:09:16.000Z","lastUpdated":"2021-06-17T19:09:16.000Z","lastMembershipUpdated":"2021-06-17T19:09:16.000Z","objectClass":["okta:user_group"],"type":"OKTA_GROUP","profile":{"name":"First_group1","description":"for testing purpose created from API"},"_links":{"logo":[{"name":"medium","href":"https://ok12static.oktacdn.com/assets/img/logos/groups/odyssey/okta-medium.1a5ebe44c4244fb796c235d86b47e3bb.png","type":"image/png"},{"name":"large","href":"https://ok12static.oktacdn.com/assets/img/logos/groups/odyssey/okta-large.d9cfbd8a00a4feac1aa5612ba02e99c0.png","type":"image/png"}],"users":{"href":"https://dev-48491388.okta.com/api/v1/groups/00g1198993aU1Sw6j5d7/users"},"apps":{"href":"https://dev-48491388.okta.com/api/v1/groups/00g1198993aU1Sw6j5d7/apps"}}}
+2021-06-18 00:39:16,867 | INFO: Group Ids: 00g1198993aU1Sw6j5d7
+2021-06-18 00:39:16,867 | INFO: Group/s created successfully.
