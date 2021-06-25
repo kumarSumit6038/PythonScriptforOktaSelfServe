@@ -69,6 +69,8 @@ def createoidcapplication():
         print("Client ID is: "+client_id)
         logging.info("Client ID is generated: "+client_id)
         return getappid
+    else:
+        logging.error("There is some error")
 
 var2 = createoidcapplication()
 print(var2)
