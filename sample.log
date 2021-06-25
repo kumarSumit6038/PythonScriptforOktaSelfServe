@@ -1,4 +1,4 @@
-2021-06-18 23:53:42,476 | DEBUG: Here you have some information for debugging.
-2021-06-18 23:53:42,510 | DEBUG: Starting new HTTPS connection (1): dev-48491388.okta.com:443
-2021-06-18 23:53:43,723 | DEBUG: https://dev-48491388.okta.com:443 "POST /api/v1/groups HTTP/1.1" 400 None
-2021-06-18 23:53:43,731 | INFO: {"errorCode":"E0000001","errorSummary":"Api validation failed: name","errorLink":"E0000001","errorId":"oaeYuiMxvy1S_qEzwFXvvT6og","errorCauses":[{"errorSummary":"name: An object with this field already exists in the current organization"}]}
+2021-06-25 10:58:00,262 | DEBUG: Starting new HTTPS connection (1): dev-48491388.okta.com:443
+2021-06-25 10:58:02,137 | DEBUG: https://dev-48491388.okta.com:443 "POST /api/v1/apps HTTP/1.1" 200 None
+2021-06-25 10:58:02,143 | INFO: Application ID: 0oa12x4dxxJoIKaTv5d7 is generated for Test App6 application in https://dev-48491388.okta.com
+2021-06-25 10:58:02,143 | INFO: Client ID is: 0oa12x4dxxJoIKaTv5d7
