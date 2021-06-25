@@ -67,7 +67,7 @@ def createoidcapplication():
         print("Application ID:" + getappid +"For Application"+appName)
         logging.info("Application ID: "+getappid+" is generated for "+appName+" application in "+tenant_url)
         print("Client ID is: "+client_id)
-        logging.info("Client ID is: "+client_id)
+        logging.info("Client ID is generated: "+client_id)
         return getappid
 
 var2 = createoidcapplication()
