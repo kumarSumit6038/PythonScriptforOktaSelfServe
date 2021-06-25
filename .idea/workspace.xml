@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af0f4291-34d2-4032-9a3f-19636f1adf15" name="New Changelist" comment="commit">
-      <change afterPath="$PROJECT_DIR$/Push Github Code Changes to Bitbucket" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Push Github Code Changes to Bitbucket" beforeDir="false" afterPath="$PROJECT_DIR$/Push Github Code Changes to Bitbucket" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -378,7 +378,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624600472745</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="commit">
+      <created>1624600846752</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1624600846752</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

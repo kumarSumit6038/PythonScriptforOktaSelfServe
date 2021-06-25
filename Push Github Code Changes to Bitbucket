@@ -1,4 +1,4 @@
 1- clone your Bitbucket repo locally. - no need if you have bitbucket account or else use Sourcetree
 2- add a remote referencing Github repo: git remote add github https://github.com/kumarSumit6038/OktaAppSelfServe<github repo>
 3- pull from that github repo: git pull github master
-4- puch back to bitbucket: git push -u origin master
+4- push back to bitbucket: git push -u origin master
