@@ -7,21 +7,22 @@ pipeline {
         stage('Clone Repo'){
             steps{
                 script{
-                    git url: "https://github.com/kumarSumit6038/OktaAppSelfServe.git"
-                    url: "https://github.com/kumarSumit6038/OktaAppSelfServe/blob/master/app-details.properties"
+                    git url: "https://sumitkumar6038@bitbucket.org/sumitkumar6038/oktaappselfserve.git"
+                    //git url: "https://github.com/kumarSumit6038/OktaAppSelfServe.git"
+                    //url: "https://github.com/kumarSumit6038/OktaAppSelfServe/blob/master/app-details.properties"
                 }
 
             }
 
         }
-        stage("Read Properties"){
-            steps{
-                script{
-                    def props = readProperties file: './app-details.properties'
-                }
+        //stage("Read Properties"){
+          //  steps{
+            //    script{
+              //      def props = readProperties file: './app-details.properties'
+                //}
 
-            }
-        }
+            //}
+        //}
         stage('Build') {
             steps {
                 echo 'Building..'
