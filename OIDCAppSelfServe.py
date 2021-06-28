@@ -43,8 +43,8 @@ def create_oidc_application():
                 "redirect_uris": var1,
                 "initiate_login_uri": initiate_login_uri,
                 "post_logout_redirect_uris": var2,
-                "response_types": response_type,
-                "grant_types": grant_type,
+                "response_types": var3,
+                "grant_types": var4,
                 "application_type": application_type
             }
         }
