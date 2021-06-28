@@ -1,4 +1,4 @@
-2021-06-25 10:58:00,262 | DEBUG: Starting new HTTPS connection (1): dev-48491388.okta.com:443
-2021-06-25 10:58:02,137 | DEBUG: https://dev-48491388.okta.com:443 "POST /api/v1/apps HTTP/1.1" 200 None
-2021-06-25 10:58:02,143 | INFO: Application ID: 0oa12x4dxxJoIKaTv5d7 is generated for Test App6 application in https://dev-48491388.okta.com
-2021-06-25 10:58:02,143 | INFO: Client ID is: 0oa12x4dxxJoIKaTv5d7
+2021-06-27 22:16:40,334 | DEBUG: Starting new HTTPS connection (1): dev-48491388.okta.com:443
+2021-06-27 22:16:41,485 | DEBUG: https://dev-48491388.okta.com:443 "POST /api/v1/apps HTTP/1.1" 400 None
+2021-06-27 22:16:41,492 | ERROR: There is some error.Please investigate. E0000001 : Api validation failed: label
+2021-06-27 22:16:41,492 | ERROR: {"errorCode":"E0000001","errorSummary":"Api validation failed: label","errorLink":"E0000001","errorId":"oaer3EDFFYwT6OzVZFOctcUYQ","errorCauses":[{"errorSummary":"label: An active OpenID Connect Client instance with the label \"Native AppP\" already exists."}]}

@@ -92,3 +92,11 @@ def readResposne(response, inp):
     # close file
     file.close()
     return val1
+
+
+
+
+
+
+
+    {"errorCode":"E0000001","errorSummary":"Api validation failed: label","errorLink":"E0000001","errorId":"oaeMNq9R8hBS4uxjS4f2rOSEw","errorCauses":[{"errorSummary":"label: An active OpenID Connect Client instance with the label \"Native AppP\" already exists."}]}

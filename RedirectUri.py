@@ -15,17 +15,25 @@ initiate_login_uri = GetPropertyModule.get_property("initiate_login_uri")
 post_logout_redirect_uris = GetPropertyModule.get_property("post_logout_redirect_uris")
 token_endpoint_auth_method = GetPropertyModule.get_property("token_endpoint_auth_method")
 tenant_url_group = GetPropertyModule.get_property("tenant_url") + "/api/v1/groups"
+response_type = GetPropertyModule.get_property("response_type")
+grant_type = GetPropertyModule.get_property("grant_type")
 group_name = GetPropertyModule.get_property("group_name")
 group_desc = GetPropertyModule.get_property("group_desc")
 
-logging.basicConfig(filename='sample.log', filemode='w', format='%(asctime)s | %(levelname)s: %(message)s', level=logging.NOTSET)
+logging.basicConfig(filename='sample.log', filemode='w', format='%(asctime)s | %(levelname)s: %(message)s',
+                    level=logging.NOTSET)
+
+
 # createapp function
 
 def createoidcapplication():
     var1 = redirect_uri.split(",")
+    var2 = post_logout_redirect_uris.split(",")
+    var3 = response_type.split(",")
+    var4 = grant_type.split(",")
     print(var1)
-    for x in range(len(var1)):
-        print(var1[x])
+    #for x in range(len(var1)):
+   #     print(var1[x])
     payload_app = json.dumps({
         "name": "oidc_client",
         "label": label,
@@ -39,16 +47,9 @@ def createoidcapplication():
             "oauthClient": {
                 "redirect_uris": var1,
                 "initiate_login_uri": initiate_login_uri,
-                "post_logout_redirect_uris": [post_logout_redirect_uris],
-                "response_types": [
-                    "token",
-                    "id_token",
-                    "code"
-                ],
-                "grant_types": [
-                    "implicit",
-                    "authorization_code"
-                ],
+                "post_logout_redirect_uris": var2,
+                "response_types": var3,
+                "grant_types": var4,
                 "application_type": application_type
             }
         }
@@ -59,18 +60,20 @@ def createoidcapplication():
         'Authorization': 'SSWS ' + api_key
     }
     response_app = requests.request("POST", tenant_url_app, headers=headers_app, data=payload_app)
+    print(response_app.status_code)
     print(response_app.text)
-    getappid = response_app.json()['id']
-    appName = response_app.json()['label']
-    client_id = response_app.json()['credentials']['oauthClient']['client_id']
-    if(getappid is not None):
-        print("Application ID:" + getappid +"For Application"+appName)
-        logging.info("Application ID: "+getappid+" is generated for "+appName+" application in "+tenant_url)
-        print("Client ID is: "+client_id)
-        logging.info("Client ID is generated: "+client_id)
+    if response_app.status_code == 200:
+        getappid = response_app.json()['id']
+        appName = response_app.json()['label']
+        client_id = response_app.json()['credentials']['oauthClient']['client_id']
+        print("Application ID: " + getappid + " For Application " + appName)
+        logging.info("Application ID: " + getappid + " is generated for " + appName + " application in " + tenant_url)
+        print("Client ID is: " + client_id)
+        logging.info("Client ID is generated: " + client_id)
         return getappid
     else:
-        logging.error("There is some error")
+        logging.error("There is some error.Please investigate.")
+        logging.error(response_app.text)
 
 var2 = createoidcapplication()
 print(var2)

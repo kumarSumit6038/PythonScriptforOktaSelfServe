@@ -1,6 +1,7 @@
 import json
 
 import requests
+import logging
 from requests.exceptions import HTTPError
 
 import GetPropertyModule
@@ -15,6 +16,8 @@ initiate_login_uri = GetPropertyModule.get_property("initiate_login_uri")
 post_logout_redirect_uris = GetPropertyModule.get_property("post_logout_redirect_uris")
 token_endpoint_auth_method = GetPropertyModule.get_property("token_endpoint_auth_method")
 tenant_url_group = GetPropertyModule.get_property("tenant_url") + "/api/v1/groups"
+response_type = GetPropertyModule.get_property("response_type")
+grant_type = GetPropertyModule.get_property("grant_type")
 group_name = GetPropertyModule.get_property("group_name")
 group_desc = GetPropertyModule.get_property("group_desc")
 
@@ -24,6 +27,8 @@ def create_oidc_application():
     print("create Application method")
     var1 = redirect_uri.split(",")
     var2 = post_logout_redirect_uris.split(",")
+    var3 = response_type.split(",")
+    var4 = grant_type.split(",")
     payload_app = json.dumps({
         "name": "oidc_client",
         "label": label,
@@ -38,15 +43,8 @@ def create_oidc_application():
                 "redirect_uris": var1,
                 "initiate_login_uri": initiate_login_uri,
                 "post_logout_redirect_uris": var2,
-                "response_types": [
-                    "token",
-                    "id_token",
-                    "code"
-                ],
-                "grant_types": [
-                    "implicit",
-                    "authorization_code"
-                ],
+                "response_types": response_type,
+                "grant_types": grant_type,
                 "application_type": application_type
             }
         }
@@ -59,9 +57,19 @@ def create_oidc_application():
 
     response_app = requests.request("POST", tenant_url_app, headers=headers_app, data=payload_app)
     getappid = response_app.json()['id']
+    appName = response_app.json()['label']
+    client_id = response_app.json()['credentials']['oauthClient']['client_id']
     print("Application ID:" + getappid)
+    if getappid is not None:
+        print("Application ID: " + getappid + " For Application " + appName)
+        logging.info("Application ID: " + getappid + " is generated for " + appName + " application in " + tenant_url)
+        print("Client ID is: " + client_id)
+        logging.info("Client ID is generated: " + client_id)
+        return getappid
+    else:
+        logging.error(response_app.json())
     response_app.raise_for_status()
-    return getappid
+
 
 
 # create group to okta and fetch id
