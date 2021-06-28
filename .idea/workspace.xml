@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="af0f4291-34d2-4032-9a3f-19636f1adf15" name="New Changelist" comment="commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CreateGroup.py" beforeDir="false" afterPath="$PROJECT_DIR$/CreateGroup.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OIDCAppSelfServe.py" beforeDir="false" afterPath="$PROJECT_DIR$/OIDCAppSelfServe.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RedirectUri.py" beforeDir="false" afterPath="$PROJECT_DIR$/RedirectUri.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-details.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app-details.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample.log" beforeDir="false" afterPath="$PROJECT_DIR$/sample.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +60,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.RedirectUri">
+  <component name="RunManager" selected="Python.CreateGroup">
     <configuration name="CreateGroup" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -164,9 +168,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.RedirectUri" />
-        <item itemvalue="Python.OIDCAppSelfServe" />
         <item itemvalue="Python.CreateGroup" />
+        <item itemvalue="Python.OIDCAppSelfServe" />
+        <item itemvalue="Python.RedirectUri" />
         <item itemvalue="Python.GetPropertyModule" />
       </list>
     </recent_temporary>
@@ -411,7 +415,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624876308624</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="commit">
+      <created>1624891333450</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1624891333450</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
