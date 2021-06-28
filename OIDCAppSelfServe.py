@@ -21,10 +21,13 @@ grant_type = GetPropertyModule.get_property("grant_type")
 group_name = GetPropertyModule.get_property("group_name")
 group_desc = GetPropertyModule.get_property("group_desc")
 
+logging.basicConfig(filename='sample.log', filemode='w', format='%(asctime)s | %(levelname)s: %(message)s',
+                    level=logging.NOTSET)
 
-# createapp function
+
+#  function to create Application
 def create_oidc_application():
-    print("create Application method")
+    # print("create Application method")
     var1 = redirect_uri.split(",")
     var2 = post_logout_redirect_uris.split(",")
     var3 = response_type.split(",")
@@ -56,58 +59,73 @@ def create_oidc_application():
     }
 
     response_app = requests.request("POST", tenant_url_app, headers=headers_app, data=payload_app)
-    getappid = response_app.json()['id']
-    appName = response_app.json()['label']
-    client_id = response_app.json()['credentials']['oauthClient']['client_id']
-    print("Application ID:" + getappid)
-    if getappid is not None:
-        print("Application ID: " + getappid + " For Application " + appName)
-        logging.info("Application ID: " + getappid + " is generated for " + appName + " application in " + tenant_url)
-        print("Client ID is: " + client_id)
-        logging.info("Client ID is generated: " + client_id)
-        return getappid
-    else:
-        logging.error(response_app.json())
-    response_app.raise_for_status()
+    if response_app.status_code == 200:
+        getappid = response_app.json()['id']
+        appName = response_app.json()['label']
+        client_id = response_app.json()['credentials']['oauthClient']['client_id']
 
+        if application_type == 'web':
+            client_secret = response_app.json()['credentials']['oauthClient']['client_secret']
+            # print("Application ID: " + getappid + " For Application " + appName)
+            logging.info("Application " + appName + " with Application ID: " + getappid + " created in " + tenant_url)
+            # print("Client ID is: " + client_id)
+            logging.info("######### Application details are as follows ############")
+            logging.info("\n" + "Client ID is : " + client_id + "\n" + "Client Secret is : " + client_secret + "\n")
+            return getappid
+        else:
+            logging.info("Application is SPA/Native.")
+            logging.info("Application " + appName + " with Application ID: " + getappid + " created in " + tenant_url)
+            logging.info("Client ID is : " + client_id + "\n")
+    else:
+        logging.error("There is some error.Please investigate.")
+        logging.error(response_app.text)
 
 
 # create group to okta and fetch id
 def create_assign_group_to_app():
-    print("create group method")
     app_id = create_oidc_application()
-    print("Application ID: " + app_id)
+    if app_id is not None:
+        logging.info("Create and assign group to Application ID: " + app_id)
+        # print("create group method")
+        # print("Application ID: " + app_id)
 
-    var1 = group_name.split(",")
-    for x in range(len(var1)):
-        print(var1[x])
-        payload_group = json.dumps({
-            "profile": {
-                "name": var1[x],
-                "description": group_desc
+        var1 = group_name.split(",")
+        for x in range(len(var1)):
+            # print(var1[x])
+            payload_group = json.dumps({
+                "profile": {
+                    "name": var1[x],
+                    "description": group_desc
+                }
+            })
+            headers_group = {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                'Authorization': 'SSWS ' + api_key
             }
-        })
-        headers_group = {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json',
-            'Authorization': 'SSWS ' + api_key
-        }
+            response_grp = requests.request("POST", tenant_url_group, headers=headers_group, data=payload_group)
+            if response_grp.status_code == 200:
+                getgroupid = response_grp.json()['id']
+                # print("Group ID:" + getgroupid)
+                logging.info(var1[x] + " group created with id: " + getgroupid)
 
-        response_grp = requests.request("POST", tenant_url_group, headers=headers_group, data=payload_group)
-        getgroupid = response_grp.json()['id']
-        print("Group ID:" + getgroupid)
+                # Assign groups to App starts from here
 
-        # Assign groups to App starts from here
+                url = tenant_url + "/api/v1/apps/" + app_id + "/groups/" + getgroupid
+                payload = json.dumps({})
+                headers = {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                    'Authorization': 'SSWS ' + api_key
+                }
+                response = requests.request("PUT", url, headers=headers, data=payload)
+                logging.info("Groups are assigned to application.Check the application in admin console.")
+                # print(response.text)
+            else:
+                logging.error(response_grp.text)
+    else:
+        logging.error("Application is not created.Please check.")
 
-        url = tenant_url + "/api/v1/apps/" + app_id + "/groups/" + getgroupid
-        payload = json.dumps({})
-        headers = {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json',
-            'Authorization': 'SSWS ' + api_key
-        }
-        response = requests.request("PUT", url, headers=headers, data=payload)
-        print(response.text)
 
 
 create_assign_group_to_app()

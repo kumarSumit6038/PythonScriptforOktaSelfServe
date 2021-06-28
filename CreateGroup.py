@@ -9,7 +9,6 @@ import GetPropertyModule
 
 # import OIDCAppSelfServe
 
-t = time.process_time()
 
 tenant_url = GetPropertyModule.get_property("tenant_url") + "/api/v1/groups"
 api_key = GetPropertyModule.get_property("api_key")
@@ -23,21 +22,35 @@ logging.debug('Here you have some information for debugging.')
 var1 = group_name.split(",")
 for x in range(len(var1)):
     print(var1[x])
-    payload = json.dumps({
-        "profile": {
-            "name": var1[x],
-            "description": group_desc
-        }
-    })
+    logging.info(var1[x])
+    url = "https://dev-48491388.okta.com/api/v1/groups?q="+var1[x]
+    payload = {}
     headers = {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
-        'Authorization': 'SSWS ' + api_key
+        'Authorization': 'SSWS 006fKfJxkVCYoXwVpqDHIbcuGda6YspXWcF0sPE_kG',
     }
 
-    response = requests.request("POST", tenant_url, headers=headers, data=payload)
-    logging.info(response.text)
-    logging.info("Group Ids: " + response.json()['id'])
-    logging.info("Group/s created successfully.")
-    logging.info("Elapsed time = ")
-    logging.info(datetime.datetime.now())
+    response = requests.request("GET", url, headers=headers, data=payload)
+    exist_group = response.json()['profile']['name']
+    exist_group_id = response.json()['id']
+    if var1[x] != exist_group:
+        payload = json.dumps({
+            "profile": {
+                "name": var1[x],
+                "description": group_desc
+            }
+        })
+        headers = {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Authorization': 'SSWS ' + api_key
+        }
+
+        response = requests.request("POST", tenant_url, headers=headers, data=payload)
+        logging.info(response.text)
+        logging.info("Group Ids: " + response.json()['id'])
+    else:
+        logging.info("Group exist: " + exist_group_id)
+
+
