@@ -1,29 +1,5 @@
-2021-06-29 21:32:36,956 | DEBUG: Starting new HTTPS connection (1): dev-48491388.okta.com:443
-2021-06-29 21:32:38,902 | DEBUG: https://dev-48491388.okta.com:443 "POST /api/v1/apps HTTP/1.1" 200 None
-2021-06-29 21:32:38,908 | INFO: Application Web App1 with Application ID: 0oa13zoowslviXlav5d7 created in https://dev-48491388.okta.com
-2021-06-29 21:32:38,908 | INFO: ######### Application details are as follows ############
-2021-06-29 21:32:38,908 | INFO: 
-Client ID is : 0oa13zoowslviXlav5d7
-Client Secret is : _2ZxY940-bX9pKHiVII__IBLEVUwxnPd9dZmum2y
-
-2021-06-29 21:32:38,908 | INFO: Create and assign group to Application ID: 0oa13zoowslviXlav5d7
-2021-06-29 21:32:38,912 | DEBUG: Starting new HTTPS connection (1): dev-48491388.okta.com:443
-2021-06-29 21:32:40,057 | DEBUG: https://dev-48491388.okta.com:443 "GET /api/v1/groups?q=group1 HTTP/1.1" 200 None
-2021-06-29 21:32:40,068 | DEBUG: Starting new HTTPS connection (1): dev-48491388.okta.com:443
-2021-06-29 21:32:41,218 | DEBUG: https://dev-48491388.okta.com:443 "PUT /api/v1/apps/0oa13zoowslviXlav5d7/groups/00g13ym1eh50ULjT55d7 HTTP/1.1" 200 None
-2021-06-29 21:32:41,223 | INFO: Groups are assigned to application.Check the application in admin console.
-2021-06-29 21:32:41,228 | DEBUG: Starting new HTTPS connection (1): dev-48491388.okta.com:443
-2021-06-29 21:32:42,381 | DEBUG: https://dev-48491388.okta.com:443 "GET /api/v1/groups?q=group2 HTTP/1.1" 200 None
-2021-06-29 21:32:42,391 | DEBUG: Starting new HTTPS connection (1): dev-48491388.okta.com:443
-2021-06-29 21:32:43,573 | DEBUG: https://dev-48491388.okta.com:443 "PUT /api/v1/apps/0oa13zoowslviXlav5d7/groups/00g13ym94c7F938Y95d7 HTTP/1.1" 200 None
-2021-06-29 21:32:43,579 | INFO: Groups are assigned to application.Check the application in admin console.
-2021-06-29 21:32:43,584 | DEBUG: Starting new HTTPS connection (1): dev-48491388.okta.com:443
-2021-06-29 21:32:44,786 | DEBUG: https://dev-48491388.okta.com:443 "GET /api/v1/groups?q=group3 HTTP/1.1" 200 None
-2021-06-29 21:32:44,796 | DEBUG: Starting new HTTPS connection (1): dev-48491388.okta.com:443
-2021-06-29 21:32:45,983 | DEBUG: https://dev-48491388.okta.com:443 "PUT /api/v1/apps/0oa13zoowslviXlav5d7/groups/00g13ynzvd64di1W55d7 HTTP/1.1" 200 None
-2021-06-29 21:32:45,989 | INFO: Groups are assigned to application.Check the application in admin console.
-2021-06-29 21:32:45,994 | DEBUG: Starting new HTTPS connection (1): dev-48491388.okta.com:443
-2021-06-29 21:32:47,151 | DEBUG: https://dev-48491388.okta.com:443 "GET /api/v1/groups?q=group4 HTTP/1.1" 200 None
-2021-06-29 21:32:47,161 | DEBUG: Starting new HTTPS connection (1): dev-48491388.okta.com:443
-2021-06-29 21:32:48,355 | DEBUG: https://dev-48491388.okta.com:443 "PUT /api/v1/apps/0oa13zoowslviXlav5d7/groups/00g13ym94iXBjw2RJ5d7 HTTP/1.1" 200 None
-2021-06-29 21:32:48,361 | INFO: Groups are assigned to application.Check the application in admin console.
+2021-06-30 01:39:41,590 | DEBUG: Starting new HTTPS connection (1): dev-48491388.okta.com:443
+2021-06-30 01:39:42,792 | DEBUG: https://dev-48491388.okta.com:443 "POST /api/v1/apps HTTP/1.1" 400 None
+2021-06-30 01:39:42,798 | ERROR: There is some error.Please investigate.
+2021-06-30 01:39:42,799 | ERROR: {"errorCode":"E0000001","errorSummary":"Api validation failed: label","errorLink":"E0000001","errorId":"oaeroDa8bjoQXKb3FFie2QXoQ","errorCauses":[{"errorSummary":"label: An active OpenID Connect Client instance with the label \"Web App3\" already exists."}]}
+2021-06-30 01:39:42,799 | ERROR: Application is not created.Please check.
