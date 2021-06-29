@@ -92,6 +92,7 @@ def create_assign_group_to_app():
         var1 = group_name.split(",")
         for x in range(len(var1)):
 <<<<<<< HEAD
+<<<<<<< HEAD
             # print(var1[x])
             payload_group = json.dumps({
                 "profile": {
@@ -116,10 +117,12 @@ def create_assign_group_to_app():
                 payload = json.dumps({})
                 headers = {
 =======
+=======
+
+>>>>>>> 4e5556679fb5759f49ceaa0b18539f9bdf4a7c74
             # For checking if Group already exists in okta,
             # if exists,assign to app, otherwise create new.
 
-            logging.info(var1[x])
             exist_url = "https://dev-48491388.okta.com/api/v1/groups?q=" + var1[x]
             exist_payload = {}
             exist_headers = {
@@ -171,7 +174,7 @@ def create_assign_group_to_app():
                 if response_grp.status_code == 200:
                     getgroupid = response_grp.json()['id']
                     # print("Group ID:" + getgroupid)
-                    print("new group " + var1[x] + " created with id: " + getgroupid)
+                    # print("new group " + var1[x] + " created with id: " + getgroupid)
                     logging.info(var1[x] + " group created with id: " + getgroupid)
 
                 # Assign groups to App starts from here
@@ -191,7 +194,6 @@ def create_assign_group_to_app():
 >>>>>>> 31eff33f6c202ed86440cc01c87641bb608e1a95
     else:
         logging.error("Application is not created.Please check.")
-
 
 
 create_assign_group_to_app()
