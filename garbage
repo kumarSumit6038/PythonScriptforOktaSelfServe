@@ -1,0 +1,112 @@
+import requests
+import json
+import GetPropertyModule
+#import OIDCAppSelfServe
+
+tenant_url = GetPropertyModule.getProperty("tenant_url") + "/api/v1/groups"
+api_key = GetPropertyModule.getProperty("api_key")
+group_name = GetPropertyModule.getProperty("group_name")
+second_group = GetPropertyModule.getProperty("group_name1")
+group_desc = GetPropertyModule.getProperty("group_desc")
+second_group_desc = GetPropertyModule.getProperty("group_desc1")
+
+group_name = GetPropertyModule.getProperty("group_name").split()
+
+x = group_name.split(",")
+
+print(x)
+
+payload = json.dumps({
+  "profile": {
+    "name": group_name,
+    "description": group_desc
+  },
+  "profile": {
+    "name": second_group,
+    "description": second_group_desc
+  }
+})
+headers = {
+  'Accept': 'application/json',
+  'Content-Type': 'application/json',
+  'Authorization': 'SSWS ' + api_key
+}
+
+response = requests.request("POST", tenant_url, headers=headers, data=payload)
+
+#print(response.json()['id'])
+
+print(response.text)
+
+#group_id = OIDCAppSelfServe.readResposne(response,'id')
+#print(group_id)
+
+
+
+
+
+
+
+
+
+# Assign group to Application
+
+def assigngrouptoapp():
+    appid = createoidcapplication()
+    print("Application ID: " + appid)
+    groupid = creategroup()
+    print("Group ID: " + groupid)
+
+    url = tenant_url+"/api/v1/apps/"+appid+"/groups/"+groupid
+
+    payload = json.dumps({})
+    headers = {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'Authorization': 'SSWS '+ api_key
+    }
+
+    response = requests.request("PUT", url, headers=headers, data=payload)
+    print(response.text)
+
+
+
+
+# print(response.json()["oauthClient"]["client_id"])
+# function to read response and fetch id
+def readResposne(response, inp):
+    # write json output to file
+    with open('output.json', 'wb') as outf:
+        outf.write(response.content)
+
+    # read json file and fetch value
+    file = open('output.json')
+
+    # returns json object as a dictionary
+    data = json.load(file)
+    val1 = data[inp]
+    # iterate json file through the list
+    # for item in data["label"]:
+    #  print(item)
+
+    # close file
+    file.close()
+    return val1
+
+
+
+
+
+
+
+    {"errorCode":"E0000001","errorSummary":"Api validation failed: label","errorLink":"E0000001","errorId":"oaeMNq9R8hBS4uxjS4f2rOSEw","errorCauses":[{"errorSummary":"label: An active OpenID Connect Client instance with the label \"Native AppP\" already exists."}]}
+
+
+
+    for i in range(len(exist_group_resp)):
+        print("inside for loop for existing group")
+        print(exist_group_resp[i]['profile']['name'])
+        print(exist_group_resp[i]['id'])
+        if var1[x] in exist_group_resp[i]['profile']['name']:
+            print("inside if loop, checking group existence")
+            logging.info("Group exist with ID: " + exist_group_resp[i]['id'])

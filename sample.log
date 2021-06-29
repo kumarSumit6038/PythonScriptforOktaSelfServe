@@ -1,0 +1,36 @@
+2021-06-29 16:14:40,980 | DEBUG: Starting new HTTPS connection (1): dev-48491388.okta.com:443
+2021-06-29 16:14:42,893 | DEBUG: https://dev-48491388.okta.com:443 "POST /api/v1/apps HTTP/1.1" 200 None
+2021-06-29 16:14:42,898 | INFO: Application Web App with Application ID: 0oa13x1yo5Wwz1bgT5d7 created in https://dev-48491388.okta.com
+2021-06-29 16:14:42,899 | INFO: ######### Application details are as follows ############
+2021-06-29 16:14:42,899 | INFO: 
+Client ID is : 0oa13x1yo5Wwz1bgT5d7
+Client Secret is : 895_TEqw8m2EZh5JICPlQrvf4hE7VwbVVe5pqu0G
+
+2021-06-29 16:14:42,899 | INFO: Create and assign group to Application ID: 0oa13x1yo5Wwz1bgT5d7
+2021-06-29 16:14:42,899 | INFO: group1
+2021-06-29 16:14:42,911 | DEBUG: Starting new HTTPS connection (1): dev-48491388.okta.com:443
+2021-06-29 16:14:44,057 | DEBUG: https://dev-48491388.okta.com:443 "GET /api/v1/groups?q=group1 HTTP/1.1" 200 None
+2021-06-29 16:14:44,068 | DEBUG: Starting new HTTPS connection (1): dev-48491388.okta.com:443
+2021-06-29 16:14:46,871 | DEBUG: https://dev-48491388.okta.com:443 "PUT /api/v1/apps/0oa13x1yo5Wwz1bgT5d7/groups/00g13vq0bwVYnxuaU5d7 HTTP/1.1" 200 None
+2021-06-29 16:14:46,876 | INFO: Groups are assigned to application.Check the application in admin console.
+2021-06-29 16:14:46,876 | INFO: group2
+2021-06-29 16:14:46,881 | DEBUG: Starting new HTTPS connection (1): dev-48491388.okta.com:443
+2021-06-29 16:14:48,044 | DEBUG: https://dev-48491388.okta.com:443 "GET /api/v1/groups?q=group2 HTTP/1.1" 200 None
+2021-06-29 16:14:48,050 | DEBUG: Starting new HTTPS connection (1): dev-48491388.okta.com:443
+2021-06-29 16:14:49,206 | DEBUG: https://dev-48491388.okta.com:443 "PUT /api/v1/apps/0oa13x1yo5Wwz1bgT5d7/groups/00g13wi0gp6VSBQLv5d7 HTTP/1.1" 200 None
+2021-06-29 16:14:49,211 | INFO: Groups are assigned to application.Check the application in admin console.
+2021-06-29 16:14:49,211 | INFO: group3
+2021-06-29 16:14:49,216 | DEBUG: Starting new HTTPS connection (1): dev-48491388.okta.com:443
+2021-06-29 16:14:50,364 | DEBUG: https://dev-48491388.okta.com:443 "GET /api/v1/groups?q=group3 HTTP/1.1" 200 None
+2021-06-29 16:14:50,374 | DEBUG: Starting new HTTPS connection (1): dev-48491388.okta.com:443
+2021-06-29 16:14:51,568 | DEBUG: https://dev-48491388.okta.com:443 "PUT /api/v1/apps/0oa13x1yo5Wwz1bgT5d7/groups/00g13wjmjuUUatbGo5d7 HTTP/1.1" 200 None
+2021-06-29 16:14:51,573 | INFO: Groups are assigned to application.Check the application in admin console.
+2021-06-29 16:14:51,573 | INFO: group4
+2021-06-29 16:14:51,578 | DEBUG: Starting new HTTPS connection (1): dev-48491388.okta.com:443
+2021-06-29 16:14:52,713 | DEBUG: https://dev-48491388.okta.com:443 "GET /api/v1/groups?q=group4 HTTP/1.1" 200 None
+2021-06-29 16:14:52,718 | DEBUG: Starting new HTTPS connection (1): dev-48491388.okta.com:443
+2021-06-29 16:14:53,872 | DEBUG: https://dev-48491388.okta.com:443 "POST /api/v1/groups HTTP/1.1" 200 None
+2021-06-29 16:14:53,877 | INFO: group4 group created with id: 00g13x141c3ZIPC0G5d7
+2021-06-29 16:14:53,882 | DEBUG: Starting new HTTPS connection (1): dev-48491388.okta.com:443
+2021-06-29 16:14:55,073 | DEBUG: https://dev-48491388.okta.com:443 "PUT /api/v1/apps/0oa13x1yo5Wwz1bgT5d7/groups/00g13x141c3ZIPC0G5d7 HTTP/1.1" 200 None
+2021-06-29 16:14:55,078 | INFO: Groups are assigned to application.Check the application in admin console.
