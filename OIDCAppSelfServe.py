@@ -70,7 +70,7 @@ def create_oidc_application():
             logging.info("Application " + appName + " with Application ID: " + getappid + " created in " + tenant_url)
             # print("Client ID is: " + client_id)
             logging.info("######### Application details are as follows ############")
-            logging.info("\n" + "Client ID is : " + client_id + "\n" + "Client Secret is : " + client_secret + "\n")
+            #logging.info("\n" + "Client ID is : " + client_id + "\n" + "Client Secret is : " + client_secret + "\n")
             return getappid
         else:
             logging.info("Application is SPA/Native.")
