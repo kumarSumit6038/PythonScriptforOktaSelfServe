@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af0f4291-34d2-4032-9a3f-19636f1adf15" name="New Changelist" comment="commit">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -20,6 +21,9 @@
 =======
       <change beforePath="$PROJECT_DIR$/OIDCAppSelfServe.py" beforeDir="false" afterPath="$PROJECT_DIR$/OIDCAppSelfServe.py" afterDir="false" />
 >>>>>>> 4e5556679fb5759f49ceaa0b18539f9bdf4a7c74
+=======
+      <change afterPath="$PROJECT_DIR$/app-details.properties" afterDir="false" />
+>>>>>>> 50941c6b1aedc29f888594d5e2286930578c5100
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -496,8 +500,19 @@
       <option name="project" value="LOCAL" />
       <updated>1624973250114</updated>
     </task>
+<<<<<<< HEAD
     <option name="localTasksCounter" value="41" />
 >>>>>>> 4e5556679fb5759f49ceaa0b18539f9bdf4a7c74
+=======
+    <task id="LOCAL-00041" summary="commit">
+      <created>1624976755019</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1624976755019</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
+>>>>>>> 50941c6b1aedc29f888594d5e2286930578c5100
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
