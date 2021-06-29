@@ -91,39 +91,6 @@ def create_assign_group_to_app():
 
         var1 = group_name.split(",")
         for x in range(len(var1)):
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            # print(var1[x])
-            payload_group = json.dumps({
-                "profile": {
-                    "name": var1[x],
-                    "description": group_desc
-                }
-            })
-            headers_group = {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-                'Authorization': 'SSWS ' + api_key
-            }
-            response_grp = requests.request("POST", tenant_url_group, headers=headers_group, data=payload_group)
-            if response_grp.status_code == 200:
-                getgroupid = response_grp.json()['id']
-                # print("Group ID:" + getgroupid)
-                logging.info(var1[x] + " group created with id: " + getgroupid)
-
-                # Assign groups to App starts from here
-
-                url = tenant_url + "/api/v1/apps/" + app_id + "/groups/" + getgroupid
-                payload = json.dumps({})
-                headers = {
-=======
-=======
-
->>>>>>> 4e5556679fb5759f49ceaa0b18539f9bdf4a7c74
-=======
-
->>>>>>> d07514fd1cdbd0a1d6163fccc52b8f11c6d4b904
             # For checking if Group already exists in okta,
             # if exists,assign to app, otherwise create new.
 
@@ -162,24 +129,11 @@ def create_assign_group_to_app():
                     }
                 })
                 headers_group = {
-<<<<<<< HEAD
->>>>>>> 31eff33f6c202ed86440cc01c87641bb608e1a95
-=======
->>>>>>> d07514fd1cdbd0a1d6163fccc52b8f11c6d4b904
                     'Accept': 'application/json',
                     'Content-Type': 'application/json',
                     'Authorization': 'SSWS ' + api_key
                 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-                response = requests.request("PUT", url, headers=headers, data=payload)
-                logging.info("Groups are assigned to application.Check the application in admin console.")
-                # print(response.text)
-            else:
-                logging.error(response_grp.text)
-=======
-=======
->>>>>>> d07514fd1cdbd0a1d6163fccc52b8f11c6d4b904
+
                 response_grp = requests.request("POST", tenant_url_group, headers=headers_group, data=payload_group)
                 if response_grp.status_code == 200:
                     getgroupid = response_grp.json()['id']
@@ -201,10 +155,6 @@ def create_assign_group_to_app():
                     # print(response.text)
                 else:
                     logging.error(response_grp.text)
-<<<<<<< HEAD
->>>>>>> 31eff33f6c202ed86440cc01c87641bb608e1a95
-=======
->>>>>>> d07514fd1cdbd0a1d6163fccc52b8f11c6d4b904
     else:
         logging.error("Application is not created.Please check.")
 

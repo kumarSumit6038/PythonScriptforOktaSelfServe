@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af0f4291-34d2-4032-9a3f-19636f1adf15" name="New Changelist" comment="commit">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CreateGroup.py" beforeDir="false" afterPath="$PROJECT_DIR$/CreateGroup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OIDCAppSelfServe.py" beforeDir="false" afterPath="$PROJECT_DIR$/OIDCAppSelfServe.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-details.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app-details.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sample.log" beforeDir="false" afterPath="$PROJECT_DIR$/sample.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +33,6 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectId" id="1trH6Gv0zjiSOPmWr2gv4EAFtQv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -531,16 +534,5 @@
     <option name="LAST_COMMIT_MESSAGE" value="commit" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>8</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
