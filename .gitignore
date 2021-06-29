@@ -1,4 +1,8 @@
 # Project exclude paths
+<<<<<<< HEAD
 # /venv/
+=======
+/venv/
+>>>>>>> d07514fd1cdbd0a1d6163fccc52b8f11c6d4b904
 
 
