@@ -27,6 +27,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectId" id="1trH6Gv0zjiSOPmWr2gv4EAFtQv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -175,20 +176,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1623520111505</updated>
-    </task>
-    <task id="LOCAL-00001" summary="commit">
-      <created>1623958264029</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1623958264029</updated>
-    </task>
-    <task id="LOCAL-00002" summary="commit">
-      <created>1624028432205</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1624028432205</updated>
     </task>
     <task id="LOCAL-00003" summary="commit">
       <created>1624028464900</created>
@@ -519,7 +506,21 @@
       <option name="project" value="LOCAL" />
       <updated>1624997476111</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="commit">
+      <created>1624999435539</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1624999435540</updated>
+    </task>
+    <task id="LOCAL-00051" summary="commit">
+      <created>1624999616127</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1624999616127</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
