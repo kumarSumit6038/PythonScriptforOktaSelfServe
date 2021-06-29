@@ -2,7 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af0f4291-34d2-4032-9a3f-19636f1adf15" name="New Changelist" comment="commit">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/OIDCAppSelfServe.py" beforeDir="false" afterPath="$PROJECT_DIR$/OIDCAppSelfServe.py" afterDir="false" />
+=======
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/CreateGroup.py" beforeDir="false" afterPath="$PROJECT_DIR$/CreateGroup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OIDCAppSelfServe.py" beforeDir="false" afterPath="$PROJECT_DIR$/OIDCAppSelfServe.py" afterDir="false" />
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/RedirectUri.py" beforeDir="false" afterPath="$PROJECT_DIR$/RedirectUri.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-details.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app-details.properties" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/app-details.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app-details.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/garbage" beforeDir="false" afterPath="$PROJECT_DIR$/garbage" afterDir="false" />
+>>>>>>> 31eff33f6c202ed86440cc01c87641bb608e1a95
+      <change beforePath="$PROJECT_DIR$/sample.log" beforeDir="false" afterPath="$PROJECT_DIR$/sample.log" afterDir="false" />
+=======
+>>>>>>> 550731e24091a6b82de03631ac55a6a560a62506
+=======
+      <change beforePath="$PROJECT_DIR$/OIDCAppSelfServe.py" beforeDir="false" afterPath="$PROJECT_DIR$/OIDCAppSelfServe.py" afterDir="false" />
+>>>>>>> 4e5556679fb5759f49ceaa0b18539f9bdf4a7c74
+=======
+      <change afterPath="$PROJECT_DIR$/app-details.properties" afterDir="false" />
+>>>>>>> 50941c6b1aedc29f888594d5e2286930578c5100
+>>>>>>> ebebdb241371b632196ac4c3c096e5fac5f42024
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +79,11 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
+<<<<<<< HEAD
+  <component name="RunManager" selected="Python.CreateGroup">
+=======
   <component name="RunManager" selected="Python.OIDCAppSelfServe">
+>>>>>>> 31eff33f6c202ed86440cc01c87641bb608e1a95
     <configuration name="CreateGroup" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -162,8 +191,13 @@
     </configuration>
     <recent_temporary>
       <list>
+<<<<<<< HEAD
+        <item itemvalue="Python.CreateGroup" />
+        <item itemvalue="Python.OIDCAppSelfServe" />
+=======
         <item itemvalue="Python.OIDCAppSelfServe" />
         <item itemvalue="Python.CreateGroup" />
+>>>>>>> 31eff33f6c202ed86440cc01c87641bb608e1a95
         <item itemvalue="Python.RedirectUri" />
         <item itemvalue="Python.GetPropertyModule" />
       </list>
@@ -416,6 +450,9 @@
       <option name="project" value="LOCAL" />
       <updated>1624891333450</updated>
     </task>
+<<<<<<< HEAD
+    <option name="localTasksCounter" value="35" />
+=======
     <task id="LOCAL-00035" summary="commit">
       <created>1624913213441</created>
       <option name="number" value="00035" />
@@ -423,6 +460,10 @@
       <option name="project" value="LOCAL" />
       <updated>1624913213441</updated>
     </task>
+<<<<<<< HEAD
+    <option name="localTasksCounter" value="36" />
+>>>>>>> 31eff33f6c202ed86440cc01c87641bb608e1a95
+=======
     <task id="LOCAL-00036" summary="commit">
       <created>1624963630586</created>
       <option name="number" value="00036" />
@@ -437,6 +478,10 @@
       <option name="project" value="LOCAL" />
       <updated>1624963855664</updated>
     </task>
+<<<<<<< HEAD
+    <option name="localTasksCounter" value="38" />
+>>>>>>> 550731e24091a6b82de03631ac55a6a560a62506
+=======
     <task id="LOCAL-00038" summary="commit">
       <created>1624972055440</created>
       <option name="number" value="00038" />
@@ -458,6 +503,10 @@
       <option name="project" value="LOCAL" />
       <updated>1624973250114</updated>
     </task>
+<<<<<<< HEAD
+    <option name="localTasksCounter" value="41" />
+>>>>>>> 4e5556679fb5759f49ceaa0b18539f9bdf4a7c74
+=======
     <task id="LOCAL-00041" summary="commit">
       <created>1624976755019</created>
       <option name="number" value="00041" />
@@ -465,6 +514,7 @@
       <option name="project" value="LOCAL" />
       <updated>1624976755019</updated>
     </task>
+<<<<<<< HEAD
     <task id="LOCAL-00042" summary="commit">
       <created>1624977097230</created>
       <option name="number" value="00042" />
@@ -508,6 +558,10 @@
       <updated>1624984080465</updated>
     </task>
     <option name="localTasksCounter" value="48" />
+=======
+    <option name="localTasksCounter" value="42" />
+>>>>>>> 50941c6b1aedc29f888594d5e2286930578c5100
+>>>>>>> ebebdb241371b632196ac4c3c096e5fac5f42024
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
