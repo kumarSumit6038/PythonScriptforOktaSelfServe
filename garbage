@@ -100,3 +100,13 @@ def readResposne(response, inp):
 
 
     {"errorCode":"E0000001","errorSummary":"Api validation failed: label","errorLink":"E0000001","errorId":"oaeMNq9R8hBS4uxjS4f2rOSEw","errorCauses":[{"errorSummary":"label: An active OpenID Connect Client instance with the label \"Native AppP\" already exists."}]}
+
+
+
+    for i in range(len(exist_group_resp)):
+        print("inside for loop for existing group")
+        print(exist_group_resp[i]['profile']['name'])
+        print(exist_group_resp[i]['id'])
+        if var1[x] in exist_group_resp[i]['profile']['name']:
+            print("inside if loop, checking group existence")
+            logging.info("Group exist with ID: " + exist_group_resp[i]['id'])

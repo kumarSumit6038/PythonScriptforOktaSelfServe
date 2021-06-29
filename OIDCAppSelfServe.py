@@ -91,6 +91,7 @@ def create_assign_group_to_app():
 
         var1 = group_name.split(",")
         for x in range(len(var1)):
+<<<<<<< HEAD
             # print(var1[x])
             payload_group = json.dumps({
                 "profile": {
@@ -114,15 +115,80 @@ def create_assign_group_to_app():
                 url = tenant_url + "/api/v1/apps/" + app_id + "/groups/" + getgroupid
                 payload = json.dumps({})
                 headers = {
+=======
+            # For checking if Group already exists in okta,
+            # if exists,assign to app, otherwise create new.
+
+            logging.info(var1[x])
+            exist_url = "https://dev-48491388.okta.com/api/v1/groups?q=" + var1[x]
+            exist_payload = {}
+            exist_headers = {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                'Authorization': 'SSWS 006fKfJxkVCYoXwVpqDHIbcuGda6YspXWcF0sPE_kG',
+            }
+
+            response = requests.request("GET", exist_url, headers=exist_headers, data=exist_payload)
+            exist_group_resp = response.json()
+            if len(exist_group_resp) == 1:
+                for i in range(len(exist_group_resp)):
+                    exist_group_id = exist_group_resp[i]['id']
+                    print("GroupID in okta: " + exist_group_id + " for group name: " + exist_group_resp[i]['profile']['name'])
+                    # Assign groups to App starts from here
+
+                    url = tenant_url + "/api/v1/apps/" + app_id + "/groups/" + exist_group_id
+                    payload = json.dumps({})
+                    headers = {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json',
+                        'Authorization': 'SSWS ' + api_key
+                    }
+                    response = requests.request("PUT", url, headers=headers, data=payload)
+                    logging.info("Groups are assigned to application.Check the application in admin console.")
+                    # print(response.text)
+            else:
+                # print(var1[x])
+                payload_group = json.dumps({
+                    "profile": {
+                        "name": var1[x],
+                        "description": group_desc
+                    }
+                })
+                headers_group = {
+>>>>>>> 31eff33f6c202ed86440cc01c87641bb608e1a95
                     'Accept': 'application/json',
                     'Content-Type': 'application/json',
                     'Authorization': 'SSWS ' + api_key
                 }
+<<<<<<< HEAD
                 response = requests.request("PUT", url, headers=headers, data=payload)
                 logging.info("Groups are assigned to application.Check the application in admin console.")
                 # print(response.text)
             else:
                 logging.error(response_grp.text)
+=======
+                response_grp = requests.request("POST", tenant_url_group, headers=headers_group, data=payload_group)
+                if response_grp.status_code == 200:
+                    getgroupid = response_grp.json()['id']
+                    # print("Group ID:" + getgroupid)
+                    print("new group " + var1[x] + " created with id: " + getgroupid)
+                    logging.info(var1[x] + " group created with id: " + getgroupid)
+
+                # Assign groups to App starts from here
+
+                    url = tenant_url + "/api/v1/apps/" + app_id + "/groups/" + getgroupid
+                    payload = json.dumps({})
+                    headers = {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json',
+                        'Authorization': 'SSWS ' + api_key
+                    }
+                    response = requests.request("PUT", url, headers=headers, data=payload)
+                    logging.info("Groups are assigned to application.Check the application in admin console.")
+                    # print(response.text)
+                else:
+                    logging.error(response_grp.text)
+>>>>>>> 31eff33f6c202ed86440cc01c87641bb608e1a95
     else:
         logging.error("Application is not created.Please check.")
 

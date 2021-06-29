@@ -2,11 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af0f4291-34d2-4032-9a3f-19636f1adf15" name="New Changelist" comment="commit">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CreateGroup.py" beforeDir="false" afterPath="$PROJECT_DIR$/CreateGroup.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/OIDCAppSelfServe.py" beforeDir="false" afterPath="$PROJECT_DIR$/OIDCAppSelfServe.py" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/RedirectUri.py" beforeDir="false" afterPath="$PROJECT_DIR$/RedirectUri.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app-details.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app-details.properties" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/app-details.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app-details.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/garbage" beforeDir="false" afterPath="$PROJECT_DIR$/garbage" afterDir="false" />
+>>>>>>> 31eff33f6c202ed86440cc01c87641bb608e1a95
       <change beforePath="$PROJECT_DIR$/sample.log" beforeDir="false" afterPath="$PROJECT_DIR$/sample.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +66,11 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
+<<<<<<< HEAD
   <component name="RunManager" selected="Python.CreateGroup">
+=======
+  <component name="RunManager" selected="Python.OIDCAppSelfServe">
+>>>>>>> 31eff33f6c202ed86440cc01c87641bb608e1a95
     <configuration name="CreateGroup" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -168,8 +178,13 @@
     </configuration>
     <recent_temporary>
       <list>
+<<<<<<< HEAD
         <item itemvalue="Python.CreateGroup" />
         <item itemvalue="Python.OIDCAppSelfServe" />
+=======
+        <item itemvalue="Python.OIDCAppSelfServe" />
+        <item itemvalue="Python.CreateGroup" />
+>>>>>>> 31eff33f6c202ed86440cc01c87641bb608e1a95
         <item itemvalue="Python.RedirectUri" />
         <item itemvalue="Python.GetPropertyModule" />
       </list>
@@ -422,7 +437,18 @@
       <option name="project" value="LOCAL" />
       <updated>1624891333450</updated>
     </task>
+<<<<<<< HEAD
     <option name="localTasksCounter" value="35" />
+=======
+    <task id="LOCAL-00035" summary="commit">
+      <created>1624913213441</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1624913213441</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
+>>>>>>> 31eff33f6c202ed86440cc01c87641bb608e1a95
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
