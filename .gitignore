@@ -1,6 +1,4 @@
 # Project exclude paths
 # /venv/
-/RedirectUri.py
-/CreateGroup.py
-/garbage
+
 

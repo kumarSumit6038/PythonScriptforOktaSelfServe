@@ -21,7 +21,7 @@ logging.debug('Here you have some information for debugging.')
 
 var1 = group_name.split(",")
 for x in range(len(var1)):
-    print(var1[x])
+    # print(var1[x])
     logging.info(var1[x])
     url = "https://dev-48491388.okta.com/api/v1/groups?q="+var1[x]
     payload = {}
@@ -32,9 +32,14 @@ for x in range(len(var1)):
     }
 
     response = requests.request("GET", url, headers=headers, data=payload)
-    exist_group = response.json()['profile']['name']
-    exist_group_id = response.json()['id']
-    if var1[x] != exist_group:
+    exist_group_resp = response.json()
+    # print("checking for groups in okta")
+    # print(len(exist_group_resp))
+    if len(exist_group_resp) == 1:
+        for i in range(len(exist_group_resp)):
+            exist_group_id = exist_group_resp[i]['id']
+            print("GroupID in okta: " + exist_group_id + "for group name: " + exist_group_resp[i]['profile']['name'])
+    else:
         payload = json.dumps({
             "profile": {
                 "name": var1[x],
@@ -48,9 +53,12 @@ for x in range(len(var1)):
         }
 
         response = requests.request("POST", tenant_url, headers=headers, data=payload)
+        print(response.text)
+        newgroupid = response.json()['id']
+        print("Group: " + var1[x] + " created with Group ID " + newgroupid)
         logging.info(response.text)
-        logging.info("Group Ids: " + response.json()['id'])
-    else:
-        logging.info("Group exist: " + exist_group_id)
+        # logging.info("Group Ids: " + response.json()['id'])
+
+
 
 
