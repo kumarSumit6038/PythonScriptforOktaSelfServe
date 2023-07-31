@@ -113,7 +113,7 @@ def create_assign_group_to_app():
             exist_headers = {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
-                'Authorization': 'SSWS 006fKfJxkVCYoXwVpqDHIbcuGda6YspXWcF0sPE_kG',
+                'Authorization': 'SSWS '+ api_key,
             }
 
             response = requests.request("GET", exist_url, headers=exist_headers, data=exist_payload)

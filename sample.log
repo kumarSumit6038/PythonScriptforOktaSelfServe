@@ -1,5 +1,5 @@
-2021-06-30 01:39:41,590 | DEBUG: Starting new HTTPS connection (1): dev-48491388.okta.com:443
-2021-06-30 01:39:42,792 | DEBUG: https://dev-48491388.okta.com:443 "POST /api/v1/apps HTTP/1.1" 400 None
-2021-06-30 01:39:42,798 | ERROR: There is some error.Please investigate.
-2021-06-30 01:39:42,799 | ERROR: {"errorCode":"E0000001","errorSummary":"Api validation failed: label","errorLink":"E0000001","errorId":"oaeroDa8bjoQXKb3FFie2QXoQ","errorCauses":[{"errorSummary":"label: An active OpenID Connect Client instance with the label \"Web App3\" already exists."}]}
-2021-06-30 01:39:42,799 | ERROR: Application is not created.Please check.
+2023-02-26 12:26:56,537 | DEBUG: Starting new HTTPS connection (1): dev-48491388.okta.com:443
+2023-02-26 12:26:57,744 | DEBUG: https://dev-48491388.okta.com:443 "POST /api/v1/apps HTTP/1.1" 401 None
+2023-02-26 12:26:57,747 | ERROR: There is some error.Please investigate.
+2023-02-26 12:26:57,747 | ERROR: {"errorCode":"E0000011","errorSummary":"Invalid token provided","errorLink":"E0000011","errorId":"oae89RIVtBHTqCn5mkptqzaBA","errorCauses":[]}
+2023-02-26 12:26:57,747 | ERROR: Application is not created.Please check the error message.
